@@ -17,6 +17,8 @@
 		90B504C61D2F784D00F437D3 /* test.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 90B504C51D2F784D00F437D3 /* test.PNG */; };
 		90B504C81D2F843800F437D3 /* old.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B504C71D2F843800F437D3 /* old.png */; };
 		90B504CA1D31106C00F437D3 /* test2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 90B504C91D31106C00F437D3 /* test2.PNG */; };
+		F64DFD1D1D3A97C1004B68A3 /* CommPACAppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F64DFD1C1D3A97C1004B68A3 /* CommPACAppClient.m */; settings = {ASSET_TAGS = (); }; };
+		F64DFD201D3A99EE004B68A3 /* CommPACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F64DFD1F1D3A99EE004B68A3 /* CommPACViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,10 @@
 		90B504C91D31106C00F437D3 /* test2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test2.PNG; sourceTree = "<group>"; };
 		950F8CB03BB72ACEEF889FA2 /* libPods-webRTCTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-webRTCTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24F473646A632C39C555F4A /* Pods-webRTCTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-webRTCTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-webRTCTest/Pods-webRTCTest.debug.xcconfig"; sourceTree = "<group>"; };
+		F64DFD1B1D3A97C1004B68A3 /* CommPACAppClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommPACAppClient.h; sourceTree = "<group>"; };
+		F64DFD1C1D3A97C1004B68A3 /* CommPACAppClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommPACAppClient.m; sourceTree = "<group>"; };
+		F64DFD1E1D3A99EE004B68A3 /* CommPACViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommPACViewController.h; sourceTree = "<group>"; };
+		F64DFD1F1D3A99EE004B68A3 /* CommPACViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommPACViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 		9039C7051CE1A09700D9CA38 /* webRTCTest */ = {
 			isa = PBXGroup;
 			children = (
+				F64DFD171D3A978B004B68A3 /* CommPACSDK */,
 				90B504C91D31106C00F437D3 /* test2.PNG */,
 				90B504C71D2F843800F437D3 /* old.png */,
 				90B504C51D2F784D00F437D3 /* test.PNG */,
@@ -91,6 +98,8 @@
 				9039C7141CE1A09700D9CA38 /* LaunchScreen.storyboard */,
 				9039C7171CE1A09700D9CA38 /* Info.plist */,
 				9039C7061CE1A09700D9CA38 /* Supporting Files */,
+				F64DFD1E1D3A99EE004B68A3 /* CommPACViewController.h */,
+				F64DFD1F1D3A99EE004B68A3 /* CommPACViewController.m */,
 			);
 			path = webRTCTest;
 			sourceTree = "<group>";
@@ -110,6 +119,15 @@
 				8C91A9C757C19963A78D37A6 /* Pods-webRTCTest.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F64DFD171D3A978B004B68A3 /* CommPACSDK */ = {
+			isa = PBXGroup;
+			children = (
+				F64DFD1B1D3A97C1004B68A3 /* CommPACAppClient.h */,
+				F64DFD1C1D3A97C1004B68A3 /* CommPACAppClient.m */,
+			);
+			path = CommPACSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +256,8 @@
 			files = (
 				9039C70E1CE1A09700D9CA38 /* ViewController.m in Sources */,
 				9039C70B1CE1A09700D9CA38 /* AppDelegate.m in Sources */,
+				F64DFD201D3A99EE004B68A3 /* CommPACViewController.m in Sources */,
+				F64DFD1D1D3A97C1004B68A3 /* CommPACAppClient.m in Sources */,
 				9039C7081CE1A09700D9CA38 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
