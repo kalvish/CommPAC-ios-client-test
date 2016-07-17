@@ -39,8 +39,17 @@ didReceiveRCTDataBufer:(RTCDataBuffer *)rtcDataBuffer;
 
 @property(nonatomic, readonly) CommPACAppClientState state;
 @property(nonatomic, weak) id<CommPACAppClientDelegate> delegate;
-@property(nonatomic, strong) NSString *serverHostUrl;
+//@property(nonatomic, strong) NSString *serverHostUrl;
 
 - (instancetype)initWithDelegate:(id<CommPACAppClientDelegate>)delegate;
 
+// Establishes a connection with the AppRTC servers for the given room id.
+// TODO(tkchin): provide available keys/values for options. This will be used
+// for call configurations such as overriding server choice, specifying codecs
+// and so on.
+- (void)connectToRoomWithId:(NSString *)roomId
+                    options:(NSDictionary *)options;
+
+// Disconnects from the AppRTC servers and any connected clients.
+- (void)disconnect;
 @end

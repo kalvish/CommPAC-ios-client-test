@@ -19,6 +19,7 @@
 		90B504CA1D31106C00F437D3 /* test2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 90B504C91D31106C00F437D3 /* test2.PNG */; };
 		F64DFD1D1D3A97C1004B68A3 /* CommPACAppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F64DFD1C1D3A97C1004B68A3 /* CommPACAppClient.m */; settings = {ASSET_TAGS = (); }; };
 		F64DFD201D3A99EE004B68A3 /* CommPACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F64DFD1F1D3A99EE004B68A3 /* CommPACViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F6BC87431D3BDCBE00B92E80 /* CommPACSocketIOChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6BC87421D3BDCBE00B92E80 /* CommPACSocketIOChannel.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		F64DFD1C1D3A97C1004B68A3 /* CommPACAppClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommPACAppClient.m; sourceTree = "<group>"; };
 		F64DFD1E1D3A99EE004B68A3 /* CommPACViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommPACViewController.h; sourceTree = "<group>"; };
 		F64DFD1F1D3A99EE004B68A3 /* CommPACViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommPACViewController.m; sourceTree = "<group>"; };
+		F6BC87411D3BDCBE00B92E80 /* CommPACSocketIOChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommPACSocketIOChannel.h; sourceTree = "<group>"; };
+		F6BC87421D3BDCBE00B92E80 /* CommPACSocketIOChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommPACSocketIOChannel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,8 @@
 			children = (
 				F64DFD1B1D3A97C1004B68A3 /* CommPACAppClient.h */,
 				F64DFD1C1D3A97C1004B68A3 /* CommPACAppClient.m */,
+				F6BC87411D3BDCBE00B92E80 /* CommPACSocketIOChannel.h */,
+				F6BC87421D3BDCBE00B92E80 /* CommPACSocketIOChannel.m */,
 			);
 			path = CommPACSDK;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				F64DFD201D3A99EE004B68A3 /* CommPACViewController.m in Sources */,
 				F64DFD1D1D3A97C1004B68A3 /* CommPACAppClient.m in Sources */,
 				9039C7081CE1A09700D9CA38 /* main.m in Sources */,
+				F6BC87431D3BDCBE00B92E80 /* CommPACSocketIOChannel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
