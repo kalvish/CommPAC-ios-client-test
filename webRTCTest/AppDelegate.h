@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "webRTCTest-swift.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

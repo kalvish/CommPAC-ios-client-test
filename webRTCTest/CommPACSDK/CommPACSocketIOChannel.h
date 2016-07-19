@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CommPACSignalingMessage.h"
 
 typedef NS_ENUM(NSInteger, CommPACSocketIOChannelState) {
     // State when disconnected.
@@ -23,15 +24,32 @@ typedef NS_ENUM(NSInteger, CommPACSocketIOChannelState) {
 
 @protocol CommPACSocketIOChannelDelegate <NSObject>
 
-- (void)channel:(ARDWebSocketChannel *)channel
- didChangeState:(ARDWebSocketChannelState)state;
+- (void)channel:(CommPACSocketIOChannel *)channel
+ didChangeState:(CommPACSocketIOChannelState)state;
 
-- (void)channel:(ARDWebSocketChannel *)channel
-didReceiveMessage:(ARDSignalingMessage *)message;
-
-@end
+- (void)channel:(CommPACSocketIOChannel *)channel
+didReceiveMessage:(CommPACSignalingMessage *)message;
 
 @end
+
 @interface CommPACSocketIOChannel : NSObject
+
+@property(nonatomic, readonly) NSString *roomId;
+@property(nonatomic, readonly) NSString *clientId;
+@property(nonatomic, readonly) CommPACSocketIOChannelState state;
+@property(nonatomic, weak) id<CommPACSocketIOChannelDelegate> delegate;
+
+- (instancetype)initWithURL:(NSURL *)url
+                    restURL:(NSURL *)restURL
+                   delegate:(id<CommPACSocketIOChannelDelegate>)delegate;
+
+// Registers with the WebSocket server for the given room and client id once
+// the web socket connection is open.
+- (void)registerForRoomId:(NSString *)roomId
+                 clientId:(NSString *)clientId;
+
+// Sends data over the WebSocket connection if registered, otherwise POSTs to
+// the web socket server instead.
+- (void)sendData:(NSData *)data;
 
 @end

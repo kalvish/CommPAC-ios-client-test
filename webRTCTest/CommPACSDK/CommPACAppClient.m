@@ -78,16 +78,16 @@ static NSString *kCommPACTurnRequestUrl =
     //    if (self.isRegisteredWithRoomServer) {
     //        [self unregisterWithRoomServer];
     //    }
-    if (_channel) {
-        if (_channel.state == kARDWebSocketChannelStateRegistered) {
-            // Tell the other client we're hanging up.
-            ARDByeMessage *byeMessage = [[ARDByeMessage alloc] init];
-            NSData *byeData = [byeMessage JSONData];
-            [_channel sendData:byeData];
-        }
-        // Disconnect from collider.
-        _channel = nil;
-    }
+//    if (_channel) {
+//        if (_channel.state == kARDWebSocketChannelStateRegistered) {
+//            // Tell the other client we're hanging up.
+//            ARDByeMessage *byeMessage = [[ARDByeMessage alloc] init];
+//            NSData *byeData = [byeMessage JSONData];
+//            [_channel sendData:byeData];
+//        }
+//        // Disconnect from collider.
+//        _channel = nil;
+//    }
     _clientId = nil;
     _roomId = nil;
     _isInitiator = NO;
@@ -123,39 +123,39 @@ static NSString *kCommPACTurnRequestUrl =
 
 - (void)startSignalingIfReady {
    
-    self.state = kARDAppClientStateConnected;
-    
-    // Create peer connection.
-    RTCMediaConstraints *constraints = [self defaultPeerConnectionConstraints];
-    _peerConnection = [_factory peerConnectionWithICEServers:_iceServers
-                                                 constraints:constraints
-                                                    delegate:self];
-    //RTCMediaStream *localStream = [self createLocalMediaStream];
-    //[_peerConnection addStream:localStream];
-    if (_isInitiator) {
-        
-        //Create data channel
-        RTCDataChannelInit *initData = [[RTCDataChannelInit alloc] init];
-        _dataChannel = [_peerConnection createDataChannelWithLabel:@"BoardPACDataChannel" config:initData];
-        _dataChannel.delegate = self;
-        
-        [self sendOffer];
-    } else {
-        [self waitForAnswer];
-        
-        
-    }
+//    self.state = kARDAppClientStateConnected;
+//    
+//    // Create peer connection.
+//    RTCMediaConstraints *constraints = [self defaultPeerConnectionConstraints];
+//    _peerConnection = [_factory peerConnectionWithICEServers:_iceServers
+//                                                 constraints:constraints
+//                                                    delegate:self];
+//    //RTCMediaStream *localStream = [self createLocalMediaStream];
+//    //[_peerConnection addStream:localStream];
+//    if (_isInitiator) {
+//        
+//        //Create data channel
+//        RTCDataChannelInit *initData = [[RTCDataChannelInit alloc] init];
+//        _dataChannel = [_peerConnection createDataChannelWithLabel:@"BoardPACDataChannel" config:initData];
+//        _dataChannel.delegate = self;
+//        
+//        [self sendOffer];
+//    } else {
+//        [self waitForAnswer];
+//        
+//        
+//    }
 }
 
 #pragma mark socket methods
 - (void)registerWithColliderIfReady {
 
     // Open SocketIO connection.
-    _channel =
-    [[ARDWebSocketChannel alloc] initWithURL:_websocketURL
-                                     restURL:_websocketRestURL
-                                    delegate:self];
-    [_channel registerForRoomId:_roomId clientId:_clientId];
+//    _channel =
+//    [[ARDWebSocketChannel alloc] initWithURL:_websocketURL
+//                                     restURL:_websocketRestURL
+//                                    delegate:self];
+//    [_channel registerForRoomId:_roomId clientId:_clientId];
 }
 
 #pragma mark RTCDataChannelDelegate
